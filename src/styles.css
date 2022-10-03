@@ -59,6 +59,28 @@
     text-align: justify;
 }
 
+.btn-left {
+    margin-left: 8em;
+    margin-top: -1em;
+    float: left;
+    color: black;
+
+}
+
+.btn-right {
+    float: right;
+    color: black;
+    margin-top: -6em;
+
+}
+
+.btn-med {
+    float: right;
+    color: black;
+    margin-top: -2em;
+
+}
+
 
 @media (min-width: 850px) {
     #texto{
@@ -84,8 +106,4 @@
         width: 100px;        
         margin-top: -0.6em;
     }
-    
-
-
-
 }
