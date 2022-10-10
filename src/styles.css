@@ -13,7 +13,14 @@
 }
 
 .banner {
-    margin-top: -5px;
+    margin-top: -12px;
+    margin-left: -9px;
+    margin-right: -9px;
+}
+
+.img-fluid {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #perfil {
@@ -26,7 +33,7 @@
     margin-top: -80px;
 }
 
-#acerca {
+#text-acercade {
     text-align: justify;
 }
 
