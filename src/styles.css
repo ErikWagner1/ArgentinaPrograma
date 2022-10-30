@@ -1,15 +1,16 @@
-.redes {
-    float: right;
-    font-size: 1em;
-    padding: 0.4em;
-    word-spacing: 0.5em;
+#redes {
+    font-size: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
+#redes:hover {
+    background: green;
+}
 #login {
-    font-size: 0.8em;
+    font-size: 0.7em;
     color: white;
-    padding: 0.1em;
-    margin-left: 1em;
+    margin-top: -6em;
 }
 
 .banner {
@@ -67,39 +68,38 @@
 }
 
 .btn-left {
-    margin-left: 8em;
-    margin-top: -1em;
+    margin-left: 12em;
+    margin-top: -4em;
     float: left;
-    color: black;
-
-}
-
-.btn-right {
-    float: right;
-    color: black;
-    margin-top: -6em;
+    color: red;
 
 }
 
 .btn-med {
     float: right;
-    color: black;
+    color: red;
     margin-top: -2em;
 
 }
 
+.btn-right {
+    float: right;
+    color: red;
+    margin-top: 1em;
+
+}
 
 @media (min-width: 850px) {
     #texto{
-        font-size: 1.3em;}
+        font-size: 1.3em;
+        padding: 1em;
+    }
     .logo {
         width: 100px;
     }
-    .redes {
-        font-size: 1.5em;
-        padding: 0.5em;
-        word-spacing: 0.5em;
-        margin-top: 0.3em;
+    #redes {
+        font-size: 2.5em;
+        
     }
     #inti {
         width: 300px;
@@ -113,4 +113,12 @@
         width: 100px;        
         margin-top: -0.6em;
     }
+    #login {
+        font-size: 1em;
+        margin-right: 2em;
+        margin-top: -7em
+     
+        
+    }
+
 }

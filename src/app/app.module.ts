@@ -3,16 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EncabezadoComponent } from './encabezado/encabezado.component';
-import { AcercaDeComponent } from './acerca-de/acerca-de.component';
-import { ExperienciaComponent } from './experiencia/experiencia.component';
-import { EducacionComponent } from './educacion/educacion.component';
-import { HabilidadesComponent } from './habilidades/habilidades.component';
-import { ProyectosComponent } from './proyectos/proyectos.component';
-import { HttpClientModule } from '@angular/common/http';
-import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import { EncabezadoComponent } from './components/encabezado/encabezado.component';
+import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
+import { HabilidadesComponent } from './components/habilidades/habilidades.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PortfolioService } from './servicios/portfolio.service';
+import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './servicios/interceptor.service';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PieComponent } from './components/pie/pie.component';
+//import { AcercadeService } from './servicios/acercade.service';
+
 
 @NgModule({
   declarations: [
@@ -23,16 +31,27 @@ import { ReactiveFormsModule } from '@angular/forms';
     EducacionComponent,
     HabilidadesComponent,
     ProyectosComponent,
-    IniciarSesionComponent,
-    PortfolioComponent
+    LoginComponent,
+    PortfolioComponent,
+    PieComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    DragDropModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+
+  providers: [
+    interceptorProvider,
+    //AcercadeService,
+  ],
+
   bootstrap: [AppComponent]
-})
+  })
+
 export class AppModule { }
+

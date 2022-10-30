@@ -1,3 +1,16 @@
-<div>
-    <router-outlet></router-outlet>
-</div>
+<div class="d-flex justify-content-left align-items-left pt-4 bg-dark">
+  <img src = "/assets/img/logo.png" alt ="logo" class="logo" width="50px">
+        <span class="h6 text-light mt-2" id="texto">Argentina Programa" #YoProgramo</span>
+    </div> 
+
+  <div class="d-flex justify-content-end align-items-right p-1 bg-dark">
+        <li *ngIf="!isLogin">
+          <button type="button" class="btn btn-success" id="login" routerLink="login">Iniciar Sesión</button>
+        </li>
+        <li *ngIf="isLogin">
+          <button type="button" class="btn btn-danger" id="login" routerLink="login" (click)="logOut()" (click)="refresh()"
+          style="cursor: pointer;">Cerrar Sesión</button>
+        </li>
+      </div>
+
+<router-outlet></router-outlet>
