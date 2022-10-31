@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PortfolioService {
-  url:string="http://localhost:8080/api/";
+  url:string="https://erikmwagnerap.herokuapp.com/api/";
 
   constructor(private http:HttpClient) { }
 

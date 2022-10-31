@@ -7,22 +7,22 @@ import { Acerca } from '../models/acerca';
   providedIn: 'root'
 })
 export class AcercadeService {
-  private apiServerUrl = 'http://localhost:8080/api/';
+  private apiServerUrl = 'https://erikmwagnerap.herokuapp.com/api/';
 
   constructor(private http: HttpClient) {}
 
   public getAcerca(): Observable<Acerca[]> {
-    return this.http.get<any[]>('http://localhost:8080/api/ver/acerca/');
+    return this.http.get<any[]>('https://erikmwagnerap.herokuapp.com/api/ver/acerca/');
   }
   public addAcerca(acerca: Acerca): Observable<Acerca> {
-    return this.http.post<any>('http://localhost:8080/api/new/acerca/', acerca);
+    return this.http.post<any>('https://erikmwagnerap.herokuapp.com/api/new/acerca/', acerca);
   }
   public updateAcerca(acerca: Acerca): Observable<Acerca> {
-    return this.http.put<Acerca>('http://localhost:8080/api/modificar/acerca/', acerca);
+    return this.http.put<Acerca>('https://erikmwagnerap.herokuapp.com/api/modificar/acerca/', acerca);
   }
   public deleteAcerca(id: number): Observable<void> {
     return this.http.delete<void>(
-      'http://localhost:8080/api/delete/acerca/${id}'
+      'https://erikmwagnerap.herokuapp.com/api/delete/acerca/${id}'
     );
   }
 }

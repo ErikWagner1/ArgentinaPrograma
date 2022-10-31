@@ -11,11 +11,11 @@ const cabecera = {headers: new HttpHeaders({'Content-Type': 'application/json'})
 })
 export class AuthService {
 
-  private authURL = 'http://localhost:8080/api/auth/';
+  private authURL = 'https://erikmwagnerap.herokuapp.com/api/auth/';
 
   constructor(private httpClient: HttpClient) { }
 
   public login(usuario: LoginUsuario): Observable<JwtModel> {
-    return this.httpClient.post<any>("http://localhost:8080/api/auth/login", usuario);
+    return this.httpClient.post<any>("https://erikmwagnerap.herokuapp.com/api/auth/login", usuario);
   }
 }
