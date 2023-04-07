@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PortfolioService {
-  url:string="https://erikmwagnerap.herokuapp.com/api/";
+  url:string="https://ultimointentoerik.onrender.com/api/";
 
   constructor(private http:HttpClient) { }
 
